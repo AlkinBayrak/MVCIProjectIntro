@@ -1,0 +1,39 @@
+﻿@model List<Product>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>@item.Name @item.Price</li>
+        }
+    </ul>
+
+    <table border="1">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Price</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.Price</td>
+                
+                
+                
+                </tr>
+            }
+    
+    </tbody>
+    
+    
+    </table>
+
+}
