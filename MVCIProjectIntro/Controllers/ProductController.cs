@@ -21,5 +21,20 @@ namespace MVCIProjectIntro.Controllers
         {
             return View(list)
 ;       }
+
+        [HttpGet]
+        public IActionResult Add()
+        {
+            
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Add(Product product)
+        {
+            product.Id = list.Count + 1;
+            list.Add(product);
+            return RedirectToAction("List");
+        }
     }
 }
